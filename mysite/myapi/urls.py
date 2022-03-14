@@ -4,8 +4,13 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
-router.register(r'heroes', views.HeroViewSet)
-router.register(r'villains', views.VillainViewSet)
+router.register(r'users', views.UserViewSet)
+router.register(r'billinginfo', views.BillingInfoViewSet)
+router.register(r'medicalhistory', views.MedicalHistoryViewSet)
+router.register(r'roles', views.RolesViewSet)
+router.register(r'userroles', views.UserRolesViewSet)
+router.register(r'measurements', views.MeasurementsViewSet)
+router.register(r'device', views.DeviceViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
