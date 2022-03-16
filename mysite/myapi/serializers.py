@@ -6,7 +6,7 @@ from .models import User, BillingInfo, MedicalHistory, Roles, UserRoles, Measure
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('uid', 'birth_date', 'address', 'pcp', 'sex', 'emergency_contacts')
+        fields = ('uid', 'first_name', 'last_name', 'birth_date', 'address', 'pcp', 'sex', 'emergency_contacts')
 
 class BillingInfoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
