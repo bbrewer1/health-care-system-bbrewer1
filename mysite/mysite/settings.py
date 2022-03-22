@@ -34,7 +34,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'django_queue_manager',
     'chat',
     'myapi.apps.MyapiConfig',
     'django.contrib.admin',
