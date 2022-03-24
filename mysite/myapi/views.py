@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+from django_q.tasks import async_task
 
 from rest_framework import viewsets
 
@@ -33,3 +35,11 @@ class MeasurementsViewSet(viewsets.ModelViewSet):
 class DeviceViewSet(viewsets.ModelViewSet):
     queryset = Device.objects.all().order_by('uid')
     serialzer_class = DeviceSerializer
+
+def index(request):
+    json_payload = {
+        "message": "hello world!"
+    }
+    async_task("mysite.myapi.servies.sleep_and_print", 10)
+
+    return JsonResponse(json_payload)
