@@ -28,12 +28,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '18.219.223.159',
+    '127.0.0.1'
     ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django_q',
     'chat',
     'myapi.apps.MyapiConfig',
     'django.contrib.admin',
